@@ -1,0 +1,26 @@
+The project NLP2SQL is a natural language to SQL query conversion tool 
+which is extremely fast, reliable and usable.
+The architecture of the project includes:
+    1. UI Layer:
+        UI layer enables the user to use English to communicate the 
+        his/her's requirements. Since the LLM doesn't know what the Schema 
+        is, I believe that the schema should be included or atleast embedded 
+        into the LLM being used.
+        UI= Text + Schema
+    2. Processing layer:
+        Once the backend receives the text requirement and the schema of the 
+        database, a prompt is refined and formed around the user's text. This
+        increases the reliability of the Agent's reponse.
+        More processing is done to remove redundant noise, but should be careful
+    3. LLM Layer:
+        LLM layer includes the LLM (Any LLM but mostly open-sourced)
+        which inputs the NLP query and the schema and produces the output
+    4. Output:
+        A text box/ copy-pastable text area which can be used an output feature
+    
+    Flowchart:
+        UI -> LLM/NLP Layer -> Output
+
+    Tools required:
+        1. Agentic flowchart (n8n/Langchain)
+         
